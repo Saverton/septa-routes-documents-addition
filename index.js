@@ -51,8 +51,8 @@ const NEW_TO_OLD_ROUTE_IDS = {
 };
 
 const GLN_ROUTE_IDS = ["WAR", "WTR", "LAN"];
-const FERN_ROUTE_IDS = ['WAR', 'WTR', 'LAN'];
-const PENN_ROUTE_IDS = ['NWK', 'MED', 'AIR'];
+const FERN_ROUTE_IDS = ["WAR", "WTR", "LAN"];
+const PENN_ROUTE_IDS = ["WIL", "MED", "AIR"];
 
 async function main() {
   const routesResponse = await fetch(
