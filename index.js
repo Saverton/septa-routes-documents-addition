@@ -70,7 +70,7 @@ async function main() {
     route.documents = [];
 
     // schedule pdf
-    const oldRouteId = NEW_TO_OLD_ROUTE_IDS[route.route_id];
+    const oldRouteId = NEW_TO_OLD_ROUTE_IDS[route.route_id] || route.route_id;
     route.documents.push({
       type: "schedule",
       title: `${route.route_type === 3 ? "Bus " : ""}${
