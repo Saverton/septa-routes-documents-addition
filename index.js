@@ -51,6 +51,8 @@ const NEW_TO_OLD_ROUTE_IDS = {
 };
 
 const GLN_ROUTE_IDS = ["WAR", "WTR", "LAN"];
+const FERN_ROUTE_IDS = ['WAR', 'WTR', 'LAN'];
+const PENN_ROUTE_IDS = ['NWK', 'MED', 'AIR'];
 
 async function main() {
   const routesResponse = await fetch(
@@ -92,6 +94,26 @@ async function main() {
         type: "schedule",
         title: "Glenside Combined Schedule (PDF)",
         url: "https://s3.amazonaws.com/schedules.septa.org/current/GLN.pdf",
+        linkLabel: "Open Schedule PDF",
+      });
+    }
+
+    // FERN schedule PDF
+    if (FERN_ROUTE_IDS.includes(route.route_id)) {
+      route.documents.push({
+        type: "schedule",
+        title: "Fern Rock Combined Schedule (PDF)",
+        url: "https://s3.amazonaws.com/schedules.septa.org/current/FERN.pdf",
+        linkLabel: "Open Schedule PDF",
+      });
+    }
+
+    // PENN schedule PDF
+    if (PENN_ROUTE_IDS.includes(route.route_id)) {
+      route.documents.push({
+        type: "schedule",
+        title: "Penn Medicine Combined Schedule (PDF)",
+        url: "https://s3.amazonaws.com/schedules.septa.org/current/PENN.pdf",
         linkLabel: "Open Schedule PDF",
       });
     }
