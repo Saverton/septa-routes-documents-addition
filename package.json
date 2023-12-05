@@ -1,0 +1,11 @@
+{
+  "name": "septa-routes-documents-addition",
+  "version": "1.0.0",
+  "description": "Script to add documents to each route in SEPTA's new metro routes.json.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Meadows",
+  "license": "ISC"
+}
